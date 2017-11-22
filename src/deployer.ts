@@ -1,4 +1,4 @@
-import { join, resolve } from 'path';
+import { join } from 'path';
 import { FSWatcher, watch } from 'chokidar';
 
 import { IPathConfig } from './IPathConfig';
@@ -31,11 +31,11 @@ export class Deployer {
         filePath = filePath.replace(/\\/g, '/');
         const targetObj = this.target.find(t => filePath.includes(t.src));
 
-        const relativePath = filePath.slice(targetObj.src.length);
-        const destinationPath = join(targetObj.dest, relativePath);
+        const relativePath = filePath.slice(targetObj!.src.length);
+        const destinationPath = join(targetObj!.dest, relativePath);
+        const source = targetObj!.id || filePath;
 
-
-        console.log(`${filePath} ===> ${destinationPath}`);
+        console.log(`${event} || ${source} ===> ${destinationPath}`);
     }
 
 }

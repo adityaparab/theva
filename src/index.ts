@@ -11,6 +11,7 @@ export class Theva {
         console.log('Initializing...');
         const paths: Array<IPathConfig> = [
             {
+                id:'folder1',
                 src: 'D:/Aditya/test/folder1',
                 dest: 'D:/Aditya/test/folder1_out'
             },
