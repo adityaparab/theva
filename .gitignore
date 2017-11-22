@@ -58,6 +58,5 @@ typings/
 .env
 
 #local
-build
 dist
 
