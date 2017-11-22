@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+        "declaration": true,
+        "noImplicitAny": true,
+        "suppressImplicitAnyIndexErrors": true,
+        "strictNullChecks": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "noUnusedParameters": true,
+        "noUnusedLocals": true,
+        "noEmitHelpers": true,
+        "importHelpers": true,
+        "noEmit": false,
+        "outDir": "dist",
+        "baseUrl": ".",
+        "rootDir": "src",
+        "target": "es5",
+        "module": "commonjs",
+        "lib":["es6"]
+    },
+    "exclude": [
+        "dist",
+        "node_modules"
+    ]
+}
