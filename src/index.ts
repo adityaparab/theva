@@ -1,10 +1,26 @@
-import { argv } from 'process';
+//import { argv } from 'process';
+
+//import { IConfig } from './IConfig';
+import { IPathConfig } from './IPathConfig';
+
+import { Deployer } from './deployer';
+
 
 export class Theva {
     constructor() {
         console.log('Initializing...');
-        const applicableArgs:Array<string> = Array.from(argv).slice(2);
-        console.log(applicableArgs);
+        const paths: Array<IPathConfig> = [
+            {
+                src: 'D:/Aditya/test/folder1',
+                dest: 'D:/Aditya/test/folder1_out'
+            },
+            {
+                src: 'D:/Aditya/test/folder2',
+                dest: 'D:/Aditya/test/folder2_out'
+            }
+        ];
+        const deployer = new Deployer(paths);
+        deployer.spawnWatch();
     }
 }
 
