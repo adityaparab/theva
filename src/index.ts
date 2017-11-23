@@ -6,7 +6,6 @@ import { IPathConfig } from './IPathConfig';
 
 import { Deployer } from './deployer';
 
-
 export class Theva {
     constructor() {
         const args: Arguments = argv;
