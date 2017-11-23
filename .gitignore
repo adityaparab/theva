@@ -59,4 +59,5 @@ typings/
 
 #local
 dist
-
+lib
+.vscode/
